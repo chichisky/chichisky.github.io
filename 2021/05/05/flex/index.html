@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, chichiskyHexo">
-    <meta name="description" content="">
+    <meta name="keywords" content="chichisky">
+    <meta name="description" content="世上无难事，只要肯放弃">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | chichiskyHexo</title>
+    <title>chichisky</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -43,7 +43,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">chichiskyHexo</span>
+                    <span class="logo-span">chichisky</span>
                 </a>
             </div>
             
@@ -142,10 +142,10 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">chichiskyHexo</div>
+        <div class="logo-name">chichisky</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            世上无难事，只要肯放弃
             
         </div>
     </div>
@@ -234,7 +234,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/chichisky" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -291,7 +291,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/chichisky" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-29
+                    2021-05-05
                 </div>
                 
 
@@ -459,24 +459,623 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h1 id="响应式布局学习笔记"><a href="#响应式布局学习笔记" class="headerlink" title="响应式布局学习笔记"></a>响应式布局学习笔记</h1><h2 id="mediaQuery"><a href="#mediaQuery" class="headerlink" title="mediaQuery"></a>mediaQuery</h2><p>什么是媒体查询</p>
+<ul>
+<li><p>概念：为不同尺寸的屏幕设定不同的css样式</p>
+</li>
+<li><p>device-width、device-height</p>
+<ul>
+<li>设备的宽度、高度</li>
+</ul>
+</li>
+<li><p>width、height</p>
+<ul>
+<li>浏览器的宽度、高度</li>
+</ul>
+</li>
+<li><p>~~~css<br>.box1 {<br>  width: 200px;<br>  height: 100px;<br>}<br>// - screen 屏幕的意思<br>// - 以下代码屏幕<br>// + 200-300px之间时,box1的背景颜色为pink<br>// + 300-500px之间时,box1的背景颜色为purple<br>@media screen and (min-device-width: 200px) and (max-device-width: 300px) {<br>  .box1{</p>
+<pre><code>background-color: pink;
+</code></pre>
+<p>  }<br>}<br>@media screen and (min-device-width: 300px) and (max-device-width: 500px) {<br>  .box1{</p>
+<pre><code>background-color: purple;
+</code></pre>
+<p>  }<br>}</p>
+<pre class="line-numbers language-none"><code class="language-none">
+媒体查询的引入方式
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+- 第一种：在css 文件内引用
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+- ~~~css
+  @media screen and (min-device-width: 200px) and (max-device-width: 300px) &#123;
+    .box1&#123;
+      background-color: pink;
+    &#125;
+  &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>第二种：在style标签属性中引用</p>
+</li>
+<li><p>~~~html</p>
+<head>
+  <style media="(min-device-width: 200px) and (max-device-width: 300px)">
+    .box1{
+        background-color: pink;
+      }
+  </style>
+</head>
+<pre class="line-numbers language-none"><code class="language-none">
+- 第三种：在link标签中引用
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+- ~~~html
+  &lt;head&gt;
+    &lt;link href&#x3D;&quot;css&#x2F;base.css&quot; rel&#x3D;&quot;stylesheet&quot; media&#x3D;&quot;(min-device-width: 200px) and (max-device-width: 300px)&quot;&gt;
+  &lt;&#x2F;head&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><p>弹性盒子</p>
+<ul>
+<li>弹性盒子中的子元素，如果不做额外的大小设置，可能会随着父元素自适应改变</li>
+</ul>
+<p>父对象设置</p>
+<ul>
+<li><p>flex-direction</p>
+<ul>
+<li>作用：子元素在父元素盒子中的排列方式</li>
+<li>row：默认值。按从左到右的顺序显示</li>
+<li>row-reverse：与row相同，但是以相反的顺序</li>
+<li>column：灵活的项目将垂直显示，按从上到下的顺序</li>
+<li>column-reverse：与column相同，但是以相反的顺序</li>
+</ul>
+</li>
+<li><p>flex-wrap</p>
+<ul>
+<li>作用：子元素在父元素盒子中是否换行</li>
+<li>nowrap：默认值，不换行、不换列</li>
+<li>wrap：换行、或换列</li>
+<li>wrap-reverse：换行或换列，但以相反的顺序<ul>
+<li>交叉轴相反</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>justify-content</p>
+<ul>
+<li>作用：用来在存在剩余空间时，设置为间距的格式</li>
+<li>flex-start：默认值，从左到右，挨着行的开头</li>
+<li>flex-end：从右到左，挨着行的结尾</li>
+<li>center：剧中显示</li>
+<li>space-between：平均分布在该行上，两边不留占据空间</li>
+<li>space-around：平均分布在该行上，两边留有一半的间隔空间</li>
+</ul>
+</li>
+<li><p>align-items</p>
+<ul>
+<li>作用：设置每个flex元素在交叉轴上的对齐方式(把每一行当成一个整体)</li>
+<li>flex-start：位于容器的开头</li>
+<li>flex-end：位于容器的结尾</li>
+<li>center：居中显示</li>
+</ul>
+</li>
+<li><p>align-content</p>
+<ul>
+<li>作用：设置每个flex元素在交叉轴上的对齐方式(把多行当成一个整体)</li>
+<li>flex-start：位于容器的开头</li>
+<li>flex-end：位于容器的结尾</li>
+<li>center：剧中显示</li>
+<li>space-between：平均分布，两边不留占据空间</li>
+<li>space-around：平均分布，两边留有一半的间隔空间</li>
+</ul>
+</li>
+</ul>
+<p>子对象设置</p>
+<ul>
+<li>flex-basis<ul>
+<li>设置弹性盒伸缩基准值（设置后，宽度将不再生效）</li>
+</ul>
+</li>
+<li>flex-grow<ul>
+<li>设置弹性盒子的扩展比率</li>
+<li>增加量：（父元素的宽度 - 所有子元素的宽度）/ 所有子元素的扩展比率之和 *单个子元素的扩展比率</li>
+</ul>
+</li>
+<li>flex-shrink<ul>
+<li>设置弹性盒子的缩小比率</li>
+<li>默认有一个缩小比率，均为1，不会超出</li>
+<li>减少量：（所有子元素的宽度 - 父元素的宽度）/ 所有子元素的扩展比率之和 *单个子元素的扩展比率</li>
+</ul>
+</li>
+<li>flex<ul>
+<li>flex-grow、flex-shrink、flex-basis的缩写</li>
+<li>flex默认值<ul>
+<li>flex-grow: 0, flex-shrink: 1, flex-basis: auto</li>
+</ul>
+</li>
+<li>flex: 1<ul>
+<li>flex-grow: 1, flex-shrink: 1, flex-basis: 0%</li>
+</ul>
+</li>
+<li>flex: auto<ul>
+<li>flex-grow: 1, flex-shrink: 1, flex-basis: auto</li>
+</ul>
+</li>
+<li>flex: none<ul>
+<li>flex-grow: 0, flex-shrink: 0, flex-basis: auto</li>
+</ul>
+</li>
+<li>flex: 0%<ul>
+<li>flex-grow: 1, flex-shrink: 1, flex-basis: 0%</li>
+</ul>
+</li>
+<li>flex: 100%<ul>
+<li>flex-grow: 1, flex-shrink: 1, flex-basis: 100%</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="案例一"><a href="#案例一" class="headerlink" title="案例一"></a>案例一</h3><ul>
+<li><p>输入框布局</p>
+</li>
+<li><p>~~~html</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      margin: 50px auto;
+      width: 500px;
+      height: 200px;
+    }
+    .box1 {
+      height: 30px;
+      display: flex;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+    .name, .sumbit {
+      width: 60px;
+      height: 100%;
+      background-color: #eeedee;
+      border: none;
+    }
+    input {
+      flex: 1;
+      border: none;
+      border-top:2px solid #eeedee;
+      border-bottom:2px solid #eeedee;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="box1">
+      <div class="name">姓名</div>
+      <input type="text" name="name">
+      <button class="sumbit">GO</button>
+    </div>
+  </div>
+</body>
+</html>
+<pre class="line-numbers language-none"><code class="language-none">
+### 案例二
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+- 长表单布局
+
+- ~~~html
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang&#x3D;&quot;en&quot;&gt;
+  
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;IE&#x3D;edge&quot;&gt;
+    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;
+    &lt;title&gt;Document&lt;&#x2F;title&gt;
+    &lt;style&gt;
+      .form div &#123;
+        display: flex;
+        &#x2F;* height: 40px; *&#x2F;
+        align-items: flex-start; &#x2F;&#x2F;弹性盒子中的子元素，如果不做额外的大小设置，可能会随着父元素自适应改变
+        flex: 0 0 30px;
+      &#125;
+      .form div label &#123;
+        flex: 0 0 100px;
+        text-align: right;
+      &#125;
+      .form &#123;
+        display: flex;
+        flex-direction: column;
+      &#125;
+    &lt;&#x2F;style&gt;
+  &lt;&#x2F;head&gt;
+  
+  &lt;body&gt;
+    &lt;form action&#x3D;&quot;&quot;&gt;
+      &lt;div class&#x3D;&quot;form&quot;&gt;
+        &lt;div&gt;
+          &lt;label for&#x3D;&quot;&quot;&gt;姓名&lt;&#x2F;label&gt;
+          &lt;input type&#x3D;&quot;text&quot;&gt;
+        &lt;&#x2F;div&gt;
+        &lt;div&gt;
+          &lt;label for&#x3D;&quot;&quot;&gt;请输入密码&lt;&#x2F;label&gt;
+          &lt;input type&#x3D;&quot;text&quot;&gt;
+        &lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;form&gt;
+  &lt;&#x2F;body&gt;
+  
+  &lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="案例三"><a href="#案例三" class="headerlink" title="案例三"></a>案例三</h3><h4 id="rem的使用方法"><a href="#rem的使用方法" class="headerlink" title="rem的使用方法"></a>rem的使用方法</h4><ul>
+<li><p>概念：指相对于根元素的字体大小的单位</p>
+</li>
+<li><p>~~~html</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var c = () => {
+      let w = document.documentElement.clientWidth; /* 获取屏幕尺寸的大小*/
+      let n = (20 * (w/360) > 40 ? (40 + 'px'): (20 * (w/360) + 'px'));
+      document.documentElement.style.fontSize = n;
+    }
+    window.addEventListener('read', c);
+    window.addEventListener('resize', c);
+  </script>
+  <style>
+    div {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    123
+  </div>
+</body>
+
+</html>
+<pre class="line-numbers language-none"><code class="language-none">
+### 案例四
+
+- 自适应布局
+  - 不同设备对应不同的HTML
+  - 局部自适应
+- 一句话：不同的设备用不同的页面或局部伸缩
+- 设计思路：判断设备的类型或控制局部的变化
+
+- ~~~javascript
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang&#x3D;&quot;en&quot;&gt;
+  
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;IE&#x3D;edge&quot;&gt;
+    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;
+    &lt;title&gt;Document&lt;&#x2F;title&gt;
+  
+  &lt;&#x2F;head&gt;
+  
+  &lt;body&gt;
+  &lt;&#x2F;body&gt;
+  &lt;script&gt;
+    var redirect &#x3D; () &#x3D;&gt; &#123;
+      let userAgent &#x3D; navigator.userAgent.toLowerCase();  &#x2F;** 获取设备信息*&#x2F;
+      let device &#x3D; &#x2F;ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile&#x2F;;
+      if (device.test(userAgent)) &#123;
+        window.location.href &#x3D; &#39;move.html&#39;
+      &#125; else &#123;
+        window.location.href &#x3D; &#39;pc.html&#39;
+      &#125;
+    &#125;
+    redirect();
+  &lt;&#x2F;script&gt;
+  
+  &lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="案例五"><a href="#案例五" class="headerlink" title="案例五"></a>案例五</h3><ul>
+<li><p>响应式布局</p>
+<ul>
+<li>不同设备对应不同的css样式</li>
+</ul>
+</li>
+<li><p>HTML</p>
+</li>
+<li><p>~~~html</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="big.css" media="(min-device-width: 1000px)">
+  <link rel="stylesheet" href="move.css" media="(min-device-width: 400px) and (max-device-width: 700px)">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top"></div>
+    <div class="main">
+      <div>
+        <li>分类1</li>
+        <li>分类2</li>
+        <li>分类3</li>
+        <li>分类4</li>
+        <li>分类5</li>
+        <li>分类6</li>
+      </div>
+      <div>
+        <li>图片</li>
+        <li>图片</li>
+        <li>图片</li>
+        <li>图片</li>
+        <li>图片</li>
+        <li>图片</li>
+        <li>图片</li>
+        <li>图片</li>
+        <li>图片</li>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<pre class="line-numbers language-none"><code class="language-none">
+- base.css
+
+- ~~~css
+  * &#123;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  &#125;
+  li &#123;
+    list-style: none;
+  &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>big.css</p>
+</li>
+<li><p>~~~css<br>.container {<br>  margin: auto;<br>  width: 80%;<br>  display: flex;<br>  flex-direction: column;<br>}<br>.top {<br>  width: 100%;<br>  flex: 0 0 50px;<br>  background-color: pink;<br>}<br>.main {<br>  display: flex;<br>  width: 100%;<br>}<br>.main div:nth-child(1) {<br>  flex: 0 0 10%;<br>  text-align: center;<br>  display: flex;<br>  flex-wrap: wrap;<br>  align-content: flex-start;<br>}<br>.main div:nth-child(1) li {<br>  flex: 0 0 100%;<br>  height: 40px;<br>  line-height: 40px;</p>
+<p>  border-bottom: 1px solid white;<br>}<br>.main div:nth-child(2) {<br>  flex: 0 0 90%;<br>  text-align: center;<br>  display: flex;<br>  flex-wrap: wrap;<br>  justify-content: space-around;<br>}<br>.main div:nth-child(2) li {<br>  flex: 0 0 30%;<br>  margin-top: 10px;<br>  background-color: purple;<br>  height: 120px;<br>}</p>
+<pre class="line-numbers language-none"><code class="language-none">
+- move.css
+
+- ~~~css
+  .container &#123;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  &#125;
+  .top &#123;
+    width: 100%;
+    flex: 0 0 50px;
+    background-color: pink;
+  &#125;
+  .main &#123;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  &#125;
+  .main div:nth-child(1) &#123;
+    flex: 0 0 10%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  &#125;
+  .main div:nth-child(1) li &#123;
+    flex: 0 0 30%;
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+  &#125;
+  .main div:nth-child(1) li:nth-child(3n) &#123;
+    border-right: none;
+  &#125;
+  .main div:nth-child(2) &#123;
+    flex: 0 0 90%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  &#125;
+  .main div:nth-child(2) li &#123;
+    flex: 0 0 30%;
+    margin-top: 10px;
+    background-color: purple;
+    height: 120px;
+  &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="案例6"><a href="#案例6" class="headerlink" title="案例6"></a>案例6</h3><p>rem弹性布局</p>
+<ul>
+<li><p>布局特点：为了保证在各种屏幕上的不失真，就要根据实际屏幕宽度做等比例换算</p>
+</li>
+<li><p>一句话：一套方案，使不同尺寸、分辨率的视口，都能呈现出较好的效果</p>
+</li>
+<li><p>设计思路：使用%或rem作为单位，此处采用rem为单位</p>
+</li>
+<li><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0 user-scalable=0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    * &#123;
+      margin: 0;
+      padding: 0;
+    &#125;
+
+    li &#123;
+      list-style: none;
+    &#125;
+
+    html &#123;
+      font-size: 20px;
+    &#125;
+
+    .top,
+    .main,
+    .foot &#123;
+      width: 100%;
+    &#125;
+
+    .top &#123;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2rem;
+      background-color: pink;
+      text-align: center;
+      line-height: 2rem;
+      z-index: 9;
+    &#125;
+
+    .main &#123;
+      height: auto;
+      position: absolute;
+      top: 2rem;
+      bottom: 2rem;
+      background-color: #f5f5f5;
+    &#125;
+    .main ul &#123;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 0.5rem;
+    &#125;
+    .main ul li &#123;
+      flex: 1 1 3rem;
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      align-items: center;
+    &#125;
+    .main ul li div &#123;
+      margin: 0.2rem;
+    &#125;
+    .pic &#123;
+      width: 3.6rem;
+      height: 2rem;
+      background-color: royalblue;
+    &#125;
+    .icon &#123;
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      vertical-align: -webkit-baseline-middle; /* 可以让其中的照片垂直居中*/
+      background-color: salmon;
+    &#125;
+
+    .foot &#123;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2rem;
+      display: flex;
+      justify-content: space-around;
+      z-index: 9;
+      background-color: #ddd;
+    &#125;
+
+    .foot div &#123;
+      width: 40%;
+      background-color: pink;
+    &#125;
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;top&quot;&gt;
+      头部
+    &lt;/div&gt;
+    &lt;div class=&quot;main&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div&gt;&lt;div class=&quot;pic&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;info&quot;&gt;我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点我想说我会爱你多一点点&lt;/div&gt;
+          &lt;div &gt;&lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;foot&quot;&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;script&gt;
+  var c = () =&gt; &#123;
+    let w = document.documentElement.clientWidth; /* 获取屏幕尺寸的大小*/
+    let n = (20 * (w / 360) &gt; 40 ? (40 + &#39;px&#39;) : (20 * (w / 360) + &#39;px&#39;));
+    document.documentElement.style.fontSize = n;
+  &#125;
+  window.addEventListener(&#39;read&#39;, c);
+  window.addEventListener(&#39;resize&#39;, c);
+&lt;/script&gt;
+
+&lt;/html&gt;
+</code></pre>
+</li>
+</ul>
 
                 
             </div>
@@ -503,7 +1102,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://chichisky.github.io/2021/04/29/hello-world/">http://chichisky.github.io/2021/04/29/hello-world/</a>
+                    <a href="http://chichisky.github.io/2021/05/05/flex/">http://chichisky.github.io/2021/05/05/flex/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -708,18 +1307,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/29/hello-world/">
+                <a href="/2021/05/05/javascript/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -729,9 +1327,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -740,7 +1338,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -751,13 +1348,13 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/29/hello-world/">
+                <a href="/2021/05/05/flex/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,7 +1365,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
                             </span>
                         <span class="publish-author">
                             
@@ -999,13 +1596,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/chichisky" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:2462389854@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1015,7 +1612,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2462389854" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2462389854" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
