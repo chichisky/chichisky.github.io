@@ -429,9 +429,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -590,20 +594,20 @@
 </ul>
 </li>
 <li><p>采用image来代替video，进行优化</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"> <span class="token operator">&lt;</span>video <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">"&#123;&#123;item.data.urlInfo.url&#125;&#125;"</span>
-        <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">"&#123;&#123;item.data.vid&#125;&#125;"</span>
-        <span class="token assign-left variable">bindplay</span><span class="token operator">=</span><span class="token string">"handlePlay"</span> 
-        <span class="token assign-left variable">poster</span><span class="token operator">=</span><span class="token string">"&#123;&#123;item.data.coverUrl&#125;&#125;"</span>
-        object-fit<span class="token operator">=</span><span class="token string">"cover"</span>
-        wx:if<span class="token operator">=</span><span class="token string">"&#123;&#123;videoId == item.data.vid&#125;&#125;"</span>
-        <span class="token assign-left variable">bindtimeupdate</span><span class="token operator">=</span><span class="token string">"handleTimeUpdate"</span>
-        <span class="token assign-left variable">bindended</span><span class="token operator">=</span><span class="token string">"handleEnd"</span>
-        <span class="token operator">></span><span class="token operator">&lt;</span>/video<span class="token operator">></span>
-<span class="token operator">&lt;</span>image <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">"&#123;&#123;item.data.coverUrl&#125;&#125;"</span> 
-       <span class="token assign-left variable">alt</span><span class="token operator">=</span><span class="token string">"暂时无法显示"</span>
-       <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">"&#123;&#123;item.data.vid&#125;&#125;"</span>
-       <span class="token assign-left variable">bindtap</span><span class="token operator">=</span><span class="token string">"handlePlay"</span> 
-       wx:else /<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"> &lt;video src&#x3D;&quot;&#123;&#123;item.data.urlInfo.url&#125;&#125;&quot;
+        id&#x3D;&quot;&#123;&#123;item.data.vid&#125;&#125;&quot;
+        bindplay&#x3D;&quot;handlePlay&quot; 
+        poster&#x3D;&quot;&#123;&#123;item.data.coverUrl&#125;&#125;&quot;
+        object-fit&#x3D;&quot;cover&quot;
+        wx:if&#x3D;&quot;&#123;&#123;videoId &#x3D;&#x3D; item.data.vid&#125;&#125;&quot;
+        bindtimeupdate&#x3D;&quot;handleTimeUpdate&quot;
+        bindended&#x3D;&quot;handleEnd&quot;
+        &gt;&lt;&#x2F;video&gt;
+&lt;image src&#x3D;&quot;&#123;&#123;item.data.coverUrl&#125;&#125;&quot; 
+       alt&#x3D;&quot;暂时无法显示&quot;
+       id&#x3D;&quot;&#123;&#123;item.data.vid&#125;&#125;&quot;
+       bindtap&#x3D;&quot;handlePlay&quot; 
+       wx:else &#x2F;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>下拉加载需要添加以下几个属性</p>
 <ul>
 <li><p>refresher-enabled   //  开启下拉刷新</p>
@@ -800,7 +804,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1000,6 +1008,14 @@
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -1035,6 +1051,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
                 </div>
                 
             </div>
