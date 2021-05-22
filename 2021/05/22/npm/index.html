@@ -530,9 +530,19 @@
 <td align="center">前端</td>
 </tr>
 <tr>
-<td align="center">npm i <a href="mailto:&#x73;&#119;&#x69;&#x70;&#101;&#x72;&#64;&#53;&#46;&#x34;&#x2e;&#x35;">&#x73;&#119;&#x69;&#x70;&#101;&#x72;&#64;&#53;&#46;&#x34;&#x2e;&#x35;</a> -s</td>
+<td align="center">npm i <a href="mailto:&#x73;&#119;&#105;&#112;&#101;&#x72;&#64;&#x35;&#46;&#52;&#46;&#x35;">&#x73;&#119;&#105;&#112;&#101;&#x72;&#64;&#x35;&#46;&#52;&#46;&#x35;</a> -s</td>
 <td align="center">样式 swiper.css</td>
 <td align="center">前端</td>
+</tr>
+<tr>
+<td align="center">npm i node-sass sass-loader -D</td>
+<td align="center">scss样式</td>
+<td align="center">前端</td>
+</tr>
+<tr>
+<td align="center">npm i require-all</td>
+<td align="center">引用文件夹内的所有文件</td>
+<td align="center">后端</td>
 </tr>
 </tbody></table>
 <h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><h3 id="vue2-editorv"><a href="#vue2-editorv" class="headerlink" title="vue2-editorv"></a>vue2-editorv</h3><ul>
@@ -577,7 +587,93 @@ handleImageAdded: async function(file, Editor, cursorLocation, resetUploader) &#
       resetUploader();
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="vue-awesome-swiper"><a href="#vue-awesome-swiper" class="headerlink" title="vue-awesome-swiper"></a>vue-awesome-swiper</h3><h3 id="swiper"><a href="#swiper" class="headerlink" title="swiper"></a>swiper</h3><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h3 id="Bcrypt"><a href="#Bcrypt" class="headerlink" title="Bcrypt"></a>Bcrypt</h3><p>单向Hash加密算法，类似Pbkdf2算法 不可反向破解生成明文。</p>
+<h3 id="vue-awesome-swiper"><a href="#vue-awesome-swiper" class="headerlink" title="vue-awesome-swiper"></a>vue-awesome-swiper</h3><ul>
+<li>引入</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> VueAwesomeSwiper <span class="token keyword">from</span> <span class="token string">'vue-awesome-swiper'</span>
+<span class="token keyword">import</span> <span class="token string">'swiper/css/swiper.css'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueAwesomeSwiper<span class="token punctuation">,</span> <span class="token comment">/* &#123; default global options &#125; */</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>使用</li>
+</ul>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+	&lt;div&gt;
+    &lt;!-- start of swiper --&gt;
+    &lt;swiper :options&#x3D;&quot;swiperOption&quot;&gt;
+      &lt;swiper-slide&gt;
+      	...
+      &lt;&#x2F;swiper-slide&gt;
+      &lt;div
+        class&#x3D;&quot;swiper-pagination pagination-home text-right pr-3 pb-2&quot;
+        slot&#x3D;&quot;pagination&quot;
+      &gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;swiper&gt;
+    &lt;!-- end of swiper --&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+&lt;script&gt;
+export default &#123;
+  data() &#123;
+    return &#123;
+      swiperOption: &#123;
+        &#x2F;&#x2F; 轮播按钮
+        pagination: &#123;
+          el: &quot;.pagination-home&quot;,
+        &#125;,
+        &#x2F;&#x2F; 是否自动轮播
+        autoplay: &#123;
+          disableOnInteraction: false,
+          delay: 2000,
+        &#125;,
+      &#125;
+    &#125;
+	&#125;,
+&#125;
+&lt;&#x2F;script&gt;
+&lt;style&gt;
+&#x2F;&#x2F; 轮播图样式
+.pagination-home &#123;
+  .swiper-pagination-bullet &#123;
+    opacity: 1;
+    background-color: #fff;
+    border-radius: 0.1538rem;
+    &amp;.swiper-pagination-bullet-active &#123;
+      background-color: map-get($map: $colors, $key: &quot;info&quot;);
+    &#125;
+  &#125;
+&#125;
+&lt;&#x2F;style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;div class&#x3D;&quot;card-body pt-3&quot;&gt;
+  &lt;div class&#x3D;&quot;nav jc-between&quot;&gt;
+    &lt;div class&#x3D;&quot;nav-item&quot; 
+         :class&#x3D;&quot;&#123;active: active &#x3D;&#x3D;&#x3D; i&#125;&quot; 
+         v-for&#x3D;&quot;(item, i) in categories&quot; 
+         :key&#x3D;&quot;i&quot;
+         &lt;!-- 设置点击事件到轮播页面 --&gt;
+         @click&#x3D;&quot;active &#x3D; i, $refs.news_list.$swiper.slideTo(i)&quot;&gt;
+      &lt;div class&#x3D;&quot;nav-link&quot;&gt;&#123;&#123;item.name&#125;&#125;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;pt-3&quot;&gt;
+    &lt;swiper ref&#x3D;&quot;news_list&quot; :options&#x3D; &quot;&#123;autoHeight: true&#125;&quot;
+            &lt;!--设置轮播页面改变导航效果显示--&gt;
+            @slide-change&#x3D;&quot;() &#x3D;&gt; active &#x3D; $refs.news_list.$swiper.realIndex&quot;&gt;
+      &lt;swiper-slide v-for&#x3D;&quot;(item, i) in categories&quot; :key&#x3D;&quot;i&quot;&gt;
+        &lt;slot name&#x3D;&quot;cardList&quot; :category&#x3D;&quot;item&quot;&gt;&lt;&#x2F;slot&gt;
+      &lt;&#x2F;swiper-slide&gt;
+    &lt;&#x2F;swiper&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="swiper"><a href="#swiper" class="headerlink" title="swiper"></a>swiper</h3><ul>
+<li>轮播图的样式，配合vue-awesome-swiper使用</li>
+</ul>
+<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h3 id="Bcrypt"><a href="#Bcrypt" class="headerlink" title="Bcrypt"></a>Bcrypt</h3><p>单向Hash加密算法，类似Pbkdf2算法 不可反向破解生成明文。</p>
 <p>Bcrypt有四个变量：</p>
 <ol>
 <li>saltRounds: 正数，代表hash杂凑次数，数值越高越安全，默认10次。</li>
