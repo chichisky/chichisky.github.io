@@ -530,7 +530,7 @@
 <li><p><strong>什么是 EventLoop ？</strong></p>
 </li>
 </ul>
-<p><img src="C:\Users\24623\Desktop\学习笔记\Task_Jobs\01-EventLoop.jpg" alt="01-EventLoop"></p>
+<p><img src="images/01-EventLoop.jpg" alt="01-EventLoop"></p>
 <p>​    因为首次执行宏队列中会有 script（整体代码块）任务，所以实际上就是 Js     解析完成后，在异步任务中，会先执行完所有的微任务，这里也是很多面试    题喜欢考察的。需要注意的是，新创建的微任务会立即进入微任务队列排队    执行，不需要等待下一次轮回。</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Promise 是一个类，在执行这个类的时候会传入一个执行器，这个执行器会立即执行
 Promise 会有三种状态
