@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="1.React入门1.1 React的基本使用 React是一个将数据渲染为HTML视图的开源javascript库  React的特点  采用组件化模式、声明式编码，提高开发效率及组件复用率。  在React Native中可以使用React语法进行移动端开发。  使用虚拟DOM+优秀的Diffing算法，尽量减少与真实DOM的交互。  关于虚拟DOM  本质是Object类型的对象(一般对象)">
+<meta name="description" content="关于React的一些学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react学习笔记">
 <meta property="og:url" content="http://chichisky.github.io/2021/06/10/react/index.html">
 <meta property="og:site_name" content="chichisky">
-<meta property="og:description" content="1.React入门1.1 React的基本使用 React是一个将数据渲染为HTML视图的开源javascript库  React的特点  采用组件化模式、声明式编码，提高开发效率及组件复用率。  在React Native中可以使用React语法进行移动端开发。  使用虚拟DOM+优秀的Diffing算法，尽量减少与真实DOM的交互。  关于虚拟DOM  本质是Object类型的对象(一般对象)">
+<meta property="og:description" content="关于React的一些学习笔记">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-06-10T03:46:45.573Z">
-<meta property="article:modified_time" content="2021-06-10T03:53:43.789Z">
+<meta property="article:modified_time" content="2021-06-24T09:34:06.660Z">
 <meta property="article:author" content="chichisky">
 <meta property="article:tag" content="react">
 <meta name="twitter:card" content="summary">
@@ -372,7 +372,8 @@
       
 
       
-        <h2 id="1-React入门"><a href="#1-React入门" class="headerlink" title="1.React入门"></a>1.React入门</h2><h4 id="1-1-React的基本使用"><a href="#1-1-React的基本使用" class="headerlink" title="1.1 React的基本使用"></a>1.1 React的基本使用</h4><ul>
+        <p>关于React的一些学习笔记<span id="more"></span></p>
+<h2 id="1-React入门"><a href="#1-React入门" class="headerlink" title="1.React入门"></a>1.React入门</h2><h4 id="1-1-React的基本使用"><a href="#1-1-React的基本使用" class="headerlink" title="1.1 React的基本使用"></a>1.1 React的基本使用</h4><ul>
 <li>React是一个将数据渲染为HTML视图的开源javascript库</li>
 </ul>
 <p>React的特点</p>
@@ -404,18 +405,35 @@
 </ul>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">JSX的语法规则
 
-+ 1.定义虚拟DOM时,不能写引号
-+ 2.标签中混入JS表达式要用()
-+ 3.样式类的添加,要用className
-+ 4.内联样式,要使用style&#x3D;&#123;&#123;kay: &#39;value&#39;&#125;&#125;的形式
-+ 5.只有一个根标签
-+ 6.标签必须闭合
-+ 7.标签首字母
-  +   小写字母会被当做html同名元素,若没有,则报错
-  +   大写字母会被当做相应组件名,若没有定义相应组件,则报错<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+1.定义虚拟DOM时,不能写引号
+2.标签中混入JS表达式要用()
+3.样式类的添加,要用className
+4.内联样式,要使用style&#x3D;&#123;&#123;kay: &#39;value&#39;&#125;&#125;的形式
+5.只有一个根标签
+6.标签必须闭合
+7.标签首字母
+    小写字母会被当做html同名元素,若没有,则报错
+    大写字母会被当做相应组件名,若没有定义相应组件,则报错<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
+<h4 id="todoList案例"><a href="#todoList案例" class="headerlink" title="todoList案例"></a>todoList案例</h4><p>github: <a target="_blank" rel="noopener" href="https://github.com/chichisky/react_todo">todoList小案例</a></p>
+<ul>
+<li>相关知识点<ul>
+<li>拆分组件、实现静态组件</li>
+<li>动态初始化列表，如何确定将数据放哪个组件的state中<ul>
+<li>某个组件使用：其自身state中</li>
+<li>某些组件使用：其共同父组件state中</li>
+</ul>
+</li>
+<li>关于父子组件之间通信：<ul>
+<li>父组件 =&gt; 子组件：通过props传递</li>
+<li>子组件 =&gt; 父组件：通过props传递，需要父提前给子传递一个函数</li>
+</ul>
+</li>
+<li>注意defaultChecked 和 checked 的区别， 类似的还有：defaultValue和value</li>
+<li>状态在哪里，操作状态的方法就在哪里</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -590,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-React%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">1.React入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-React%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.1 React的基本使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-React-JSX"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.2 React JSX</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-React%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">1.React入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-React%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.1 React的基本使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-React-JSX"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.2 React JSX</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#todoList%E6%A1%88%E4%BE%8B"><span class="nav-number">1.0.3.</span> <span class="nav-text">todoList案例</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
