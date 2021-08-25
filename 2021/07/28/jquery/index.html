@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Task&Jobs," />
+  <meta name="keywords" content="jquery," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="Task&amp;Jobs">
+<meta name="description" content="关于jquery的基础了解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Task&amp;Jobs">
-<meta property="og:url" content="http://chichisky.github.io/2021/05/05/task-jobs/index.html">
+<meta property="og:title" content="jquery基础知识">
+<meta property="og:url" content="http://chichisky.github.io/2021/07/28/jquery/index.html">
 <meta property="og:site_name" content="chichisky">
-<meta property="og:description" content="Task&amp;Jobs">
+<meta property="og:description" content="关于jquery的基础了解">
 <meta property="og:locale">
-<meta property="og:image" content="http://chichisky.github.io/2021/05/05/task-jobs/images/01-EventLoop.jpg">
-<meta property="article:published_time" content="2021-05-05T13:26:18.297Z">
-<meta property="article:modified_time" content="2021-05-26T00:45:30.542Z">
+<meta property="article:published_time" content="2021-07-28T01:12:25.156Z">
+<meta property="article:modified_time" content="2021-07-28T01:11:56.738Z">
 <meta property="article:author" content="chichisky">
-<meta property="article:tag" content="Task&amp;Jobs">
+<meta property="article:tag" content="jquery">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://chichisky.github.io/2021/05/05/task-jobs/images/01-EventLoop.jpg">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://chichisky.github.io/2021/05/05/task-jobs/"/>
+  <link rel="canonical" href="http://chichisky.github.io/2021/07/28/jquery/"/>
 
 
 
 
 
-  <title>Task&Jobs | chichisky</title>
+  <title>jquery基础知识 | chichisky</title>
   
 
 
@@ -285,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chichisky.github.io/2021/05/05/task-jobs/">
+    <link itemprop="mainEntityOfPage" href="http://chichisky.github.io/2021/07/28/jquery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -302,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Task&Jobs</h1>
+          <h1 class="post-title" itemprop="name headline">jquery基础知识</h1>
         
 
         <div class="post-meta">
@@ -314,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-05T21:26:18+08:00">
-                2021-05-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-28T09:12:25+08:00">
+                2021-07-28
               </time>
             
 
@@ -374,69 +372,131 @@
       
 
       
-        <p>Task&amp;Jobs <span id="more"></span></p>
-<h1 id="Task-amp-Jobs"><a href="#Task-amp-Jobs" class="headerlink" title="Task&amp;Jobs"></a>Task&amp;Jobs</h1><ul>
-<li>什么是宏任务与微任务？<ul>
-<li>我们都知道JS是单线程，但是一些高耗时操作就带来了进程阻塞问题。为了解决这个问题，JS有两种任务的执行模式：<strong>同步模式(Synchronous)和异步模式(Asynchronous)</strong></li>
-<li>在异步模式下，创建<strong>异步任务主要分为宏任务与微任务</strong>两种。ES6规范中，宏任务(Macrotask) 称为Task，微任务(Microtask) 称为 Jobs。宏任务是由宿主（浏览器、Node）发起的，而微任务由JS自身发起。</li>
-</ul>
-</li>
-<li><strong>宏任务与微任务的集中创建方式</strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">宏任务(Macrotask)</th>
-<th align="center">微任务(Microtask)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">setTimeout</td>
-<td align="center">requestAnimationFrame(有争议)</td>
-</tr>
-<tr>
-<td align="center">setInterval</td>
-<td align="center">MutationObserver(浏览器环境)</td>
-</tr>
-<tr>
-<td align="center">MessageChannel</td>
-<td align="center">Promise.[ then/catch/finally ]</td>
-</tr>
-<tr>
-<td align="center">I/O, 事件队列</td>
-<td align="center">process.nextTick(Node环境)</td>
-</tr>
-<tr>
-<td align="center">setImmediate(Node环境)</td>
-<td align="center">queueMicrotask</td>
-</tr>
-<tr>
-<td align="center">script(整体代码块)</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
+        <p>关于jquery的基础了解<span id="more"></span></p>
+<h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><p>获取和设置</p>
 <ul>
-<li><p><strong>如何理解script（整体代码块）是个宏任务呢？</strong></p>
+<li><p>回调函数, 参数(被选元素, 原始值)</p>
+</li>
+<li><p><code>$(&#39;p&#39;).html(&#39;hello jquery&#39;)</code>  设置或返回HTML的内容(包括HTML标记)</p>
+</li>
+<li><p><code>$(&#39;p&#39;).text(&#39;hello jquery&#39;)</code>  设置或返回元素的文本内容</p>
+</li>
+<li><p><code>$(&#39;p&#39;).val(&#39;hello jquery&#39;)</code>  设置或返回表单字段的值</p>
+</li>
+<li><p><code>$(&#39;p&#39;).attr(&#39;href&#39;)</code>  获取属性值</p>
+</li>
+</ul>
+<p>添加</p>
 <ul>
-<li>实际上如果同时存在两个script代码块，会首先在执行第一个script代码块中的同步代码，如果这个过程中创建了微任务并进入了微任务队列，第一个script同步代码执行完之后，会首先去清空微任务队列，再去开启第二个script代码块的执行。所以script（整体代码块）是个宏任务</li>
+<li><code>$(&#39;p&#39;).append(&#39;hello&#39;)</code> 在被选元素的结尾插入内容</li>
+<li><code>$(&#39;p&#39;).prepend(&#39;hello&#39;)</code>- 在被选元素的开头插入内容</li>
+<li><code>$(&#39;p&#39;).before(&#39;&lt;b&gt;Hello&lt;/b&gt;&#39;)</code>在被选元素之前插入内容</li>
+<li><code>$(&#39;p&#39;).after(&#39;&lt;b&gt;Hello&lt;/b&gt;&#39;)</code>在被选元素之后插入内容</li>
+</ul>
+<p>删除</p>
+<ul>
+<li><code>$(&#39;p&#39;).remove(&#39;.title&#39;)</code> 删除被选元素(及其子元素),可以添加JQuery选择器语法过滤</li>
+<li><code>$(&#39;p&#39;).empty()</code> 从被选元素中删除子元素</li>
+</ul>
+<p>CSS类</p>
+<ul>
+<li><code>$(&#39;p, h2&#39;).addClass(&#39;title&#39;)</code>  添加类,可以选取多个元素</li>
+<li><code>$(&#39;p, h2&#39;).removeClass(&#39;title&#39;)</code>  删除类,可以选取多个元素</li>
+<li><code>$(&#39;p, h2&#39;).toggleClass(&#39;title&#39;)</code>  切换添加/删除类,可以选取多个元素</li>
+</ul>
+<p>css()</p>
+<ul>
+<li><code>$(&quot;p&quot;).css(&quot;background-color&quot;)</code> 返回被选元素的一个或多个样式属性</li>
+<li><code>$(&quot;p&quot;).css(&quot;propertyname&quot;, &quot;value&quot;)</code> 设置一个被选元素的样式属性</li>
+<li><code>$(&quot;p&quot;).css(&quot;propertyname&quot;:&quot;value&quot;,...)</code> 设置多个被选元素的样式属性</li>
+</ul>
+<p>尺寸</p>
+<ul>
+<li><code>$(&quot;#div1&quot;).width()|height() </code> 设置或返回元素的高度或宽度(不包括内外边距和边框)</li>
+<li><code>$(&quot;#div1&quot;).innerWidth()|innerHeight() </code> 返回元素的高度或宽度(包括内边距)</li>
+<li><code>$(&quot;#div1&quot;).outerWidth()|outerHeight() </code> 返回元素的高度或宽度(包括内边距和边框)</li>
+<li><code>$(&quot;#div1&quot;).outerWidth(true)|outerHeight(true) </code> 返回元素的高度或宽度(包括内边距和边框和外边距)</li>
+</ul>
+<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast” 或毫秒。可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</p>
+<p>显示/隐藏</p>
+<ul>
+<li><code>$(this).hide(speed,callback)</code> 隐藏当前的 HTML 元素。</li>
+<li><code>$(this).show(speed,callback)</code> 显示当前的 HTML 元素。</li>
+<li><code>$(this).toggle(speed,callback)</code> 切换显示/隐藏当前的 HTML 元素。</li>
+</ul>
+<p>淡入/淡出</p>
+<ul>
+<li><code>$(this).fadeIn(speed,callback)</code> 淡入当前的 HTML 元素。</li>
+<li><code>$(this).fadeOut(speed,callback)</code> 淡出当前的 HTML 元素。</li>
+<li><code>$(this).fadeToggle(speed,callback)</code> 切换淡入/淡出当前的 HTML 元素。</li>
+<li><code>$(this).fadeTo(speed,opacity,callback)</code> 允许渐变为给定的不透明度（值介于 0 与 1 ）。</li>
+</ul>
+<p>滑动</p>
+<ul>
+<li><code>$(selector).slideDown(speed,callback)</code> 向下滑动元素</li>
+<li><code>$(selector).slideUp(speed,callback)</code> 向上滑动元素</li>
+<li><code>$(selector).slideToggle(speed,callback)</code> 切换向上/向下滑动元素</li>
+</ul>
+<p>动画</p>
+<ul>
+<li><code>$(selector).animate(&#123;params&#125;,speed,callback)</code> 添加动画效果</li>
+<li><code>$(selector).stop(stopAll,goToEnd)</code> 停止当前动画效果<ul>
+<li>注:stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。</li>
 </ul>
 </li>
-<li><p><strong>什么是 EventLoop ？</strong></p>
+</ul>
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p>祖先</p>
+<ul>
+<li><code>$(selector).parent()</code>  返回被选元素的直接父元素</li>
+<li><code>$(selector).parents()</code>  返回被选元素的所有祖先元素</li>
+<li><code>$(selector).parentsUntil(selector)</code>  返回两个元素之间的所有祖先元素</li>
+</ul>
+<p>后代</p>
+<ul>
+<li><code>$(selector).children()</code>  返回被选元素的所有直接子元素</li>
+<li><code>$(selector).find(selector)</code>  返回被选元素中选择的所有后代元素</li>
+</ul>
+<p>同胞</p>
+<ul>
+<li><p><code>$(selector).siblings()</code>  返回被选元素的所有同胞元素</p>
+</li>
+<li><p><code>$(selector).next()</code>  返回被选元素的下一个同胞元素</p>
+</li>
+<li><p><code>$(selector).nextAll()</code>  返回被选元素的下面的所有同胞元素</p>
+</li>
+<li><p><code>$(selector).nextUntil(selector)</code>  返回两个给定参数中间的所有同胞元素</p>
+</li>
+<li><p><code>prev(), prevAll(), prevUntil()</code> 跟前面类似，但方向相反</p>
 </li>
 </ul>
-<p><img src="images/01-EventLoop.jpg" alt="01-EventLoop"></p>
-<p>​    因为首次执行宏队列中会有 script（整体代码块）任务，所以实际上就是 Js     解析完成后，在异步任务中，会先执行完所有的微任务，这里也是很多面试    题喜欢考察的。需要注意的是，新创建的微任务会立即进入微任务队列排队    执行，不需要等待下一次轮回。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Promise 是一个类，在执行这个类的时候会传入一个执行器，这个执行器会立即执行
-Promise 会有三种状态
-	Pending 等待
-	Fulfilled 完成
-	Rejected 失败
-状态只能由 Pending --&gt; Fulfilled 或者 Pending --&gt; Rejected，且一但发生改变便不可二次修改；
-Promise 中使用 resolve 和 reject 两个函数来更改状态；
-then 方法内部做但事情就是状态判断
-	如果状态是成功，调用成功回调函数
-	如果状态是失败，调用失败回调函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>过滤</p>
+<ul>
+<li><p><code>$(selector).first()</code>  返回被选元素的首个元素。</p>
+</li>
+<li><p><code>$(selector).last()</code>  返回被选元素的最后一个元素。</p>
+</li>
+<li><p><code>$(selector).eq(index)</code>  返回被选元素中带有指定索引的元素。</p>
+</li>
+<li><p><code>$(selector).filter(&quot;.info&quot;)</code>  返回匹配的元素。</p>
+</li>
+<li><p><code>$(selector).not(&quot;.info&quot;)</code>  返回不匹配的元素。</p>
+</li>
+</ul>
+<p>AJAX</p>
+<ul>
+<li><p><code>$(selector).load(URL,data,callback);</code> 从服务器加载返回数据，并放入到被选元素中。</p>
+<ul>
+<li>callback可选参数</li>
+<li>responseTxt - 包含调用成功时的结果内容</li>
+<li>statusTXT - 包含调用的状态     <code>&#39;success&#39;, &#39;error &#39;</code></li>
+<li>xhr - 包含 XMLHttpRequest 对象 <code>status, statusText</code></li>
+</ul>
+</li>
+<li><p><code>$.get(URL,callback);</code> 发送get请求</p>
+</li>
+<li><p><code>$.get(URL,data,callback);</code> 发送post请求</p>
+</li>
+</ul>
 
       
     </div>
@@ -454,7 +514,7 @@ then 方法内部做但事情就是状态判断
       
         <div class="post-tags">
           
-            <a href="/tags/Task-Jobs/" rel="tag"># Task&Jobs</a>
+            <a href="/tags/jquery/" rel="tag"># jquery</a>
           
         </div>
       
@@ -467,8 +527,8 @@ then 方法内部做但事情就是状态判断
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/05/05/vue3/" rel="next" title="Vue3.0学习笔记">
-                <i class="fa fa-chevron-left"></i> Vue3.0学习笔记
+              <a href="/2021/07/14/fieldwork/" rel="next" title="一个月实习体会">
+                <i class="fa fa-chevron-left"></i> 一个月实习体会
               </a>
             
           </div>
@@ -477,8 +537,8 @@ then 方法内部做但事情就是状态判断
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/05/05/study-style/" rel="prev" title="随笔">
-                随笔 <i class="fa fa-chevron-right"></i>
+              <a href="/2021/08/25/react-bug1/" rel="prev" title="关于动态路由切换组件没有重新挂载">
+                关于动态路由切换组件没有重新挂载 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -615,7 +675,7 @@ then 方法内部做但事情就是状态判断
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Task-amp-Jobs"><span class="nav-number">1.</span> <span class="nav-text">Task&amp;Jobs</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#html"><span class="nav-number">1.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%88%E6%9E%9C"><span class="nav-number">2.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%81%8D%E5%8E%86"><span class="nav-number">3.</span> <span class="nav-text">遍历</span></a></li></ol></div>
             
 
           </div>
