@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="jquery," />
+  <meta name="keywords" content="实习体会," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="关于jquery的基础了解">
+<meta name="description" content="转眼到现在就已经三个多月了，本来我是想早点写这个实习体会的，但是由于最近比较忙也就没顾着写。到现在才写，不得不说，愈发的感觉自学跟工作是不一样的，工作会让你收获更多，但工作有很大的局限性，自学则没有限制。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jquery基础知识">
-<meta property="og:url" content="http://chichisky.github.io/2021/07/28/jquery/index.html">
+<meta property="og:title" content="三个月实习体会">
+<meta property="og:url" content="http://chichisky.github.io/2021/09/27/fieldwork1/index.html">
 <meta property="og:site_name" content="chichisky">
-<meta property="og:description" content="关于jquery的基础了解">
+<meta property="og:description" content="转眼到现在就已经三个多月了，本来我是想早点写这个实习体会的，但是由于最近比较忙也就没顾着写。到现在才写，不得不说，愈发的感觉自学跟工作是不一样的，工作会让你收获更多，但工作有很大的局限性，自学则没有限制。">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-07-28T01:12:25.156Z">
-<meta property="article:modified_time" content="2021-07-28T01:11:56.738Z">
+<meta property="article:published_time" content="2021-09-27T10:01:54.852Z">
+<meta property="article:modified_time" content="2021-09-27T09:59:02.797Z">
 <meta property="article:author" content="chichisky">
-<meta property="article:tag" content="jquery">
+<meta property="article:tag" content="实习体会">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://chichisky.github.io/2021/07/28/jquery/"/>
+  <link rel="canonical" href="http://chichisky.github.io/2021/09/27/fieldwork1/"/>
 
 
 
 
 
-  <title>jquery基础知识 | chichisky</title>
+  <title>三个月实习体会 | chichisky</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chichisky.github.io/2021/07/28/jquery/">
+    <link itemprop="mainEntityOfPage" href="http://chichisky.github.io/2021/09/27/fieldwork1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">jquery基础知识</h1>
+          <h1 class="post-title" itemprop="name headline">三个月实习体会</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-28T09:12:25+08:00">
-                2021-07-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-09-27T18:01:54+08:00">
+                2021-09-27
               </time>
             
 
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/categories/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index">
+                    <span itemprop="name">工作</span>
                   </a>
                 </span>
 
@@ -372,131 +372,11 @@
       
 
       
-        <p>关于jquery的基础了解<span id="more"></span></p>
-<h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><p>获取和设置</p>
-<ul>
-<li><p>回调函数, 参数(被选元素, 原始值)</p>
-</li>
-<li><p><code>$(&#39;p&#39;).html(&#39;hello jquery&#39;)</code>  设置或返回HTML的内容(包括HTML标记)</p>
-</li>
-<li><p><code>$(&#39;p&#39;).text(&#39;hello jquery&#39;)</code>  设置或返回元素的文本内容</p>
-</li>
-<li><p><code>$(&#39;p&#39;).val(&#39;hello jquery&#39;)</code>  设置或返回表单字段的值</p>
-</li>
-<li><p><code>$(&#39;p&#39;).attr(&#39;href&#39;)</code>  获取属性值</p>
-</li>
-</ul>
-<p>添加</p>
-<ul>
-<li><code>$(&#39;p&#39;).append(&#39;hello&#39;)</code> 在被选元素的结尾插入内容</li>
-<li><code>$(&#39;p&#39;).prepend(&#39;hello&#39;)</code>- 在被选元素的开头插入内容</li>
-<li><code>$(&#39;p&#39;).before(&#39;&lt;b&gt;Hello&lt;/b&gt;&#39;)</code>在被选元素之前插入内容</li>
-<li><code>$(&#39;p&#39;).after(&#39;&lt;b&gt;Hello&lt;/b&gt;&#39;)</code>在被选元素之后插入内容</li>
-</ul>
-<p>删除</p>
-<ul>
-<li><code>$(&#39;p&#39;).remove(&#39;.title&#39;)</code> 删除被选元素(及其子元素),可以添加JQuery选择器语法过滤</li>
-<li><code>$(&#39;p&#39;).empty()</code> 从被选元素中删除子元素</li>
-</ul>
-<p>CSS类</p>
-<ul>
-<li><code>$(&#39;p, h2&#39;).addClass(&#39;title&#39;)</code>  添加类,可以选取多个元素</li>
-<li><code>$(&#39;p, h2&#39;).removeClass(&#39;title&#39;)</code>  删除类,可以选取多个元素</li>
-<li><code>$(&#39;p, h2&#39;).toggleClass(&#39;title&#39;)</code>  切换添加/删除类,可以选取多个元素</li>
-</ul>
-<p>css()</p>
-<ul>
-<li><code>$(&quot;p&quot;).css(&quot;background-color&quot;)</code> 返回被选元素的一个或多个样式属性</li>
-<li><code>$(&quot;p&quot;).css(&quot;propertyname&quot;, &quot;value&quot;)</code> 设置一个被选元素的样式属性</li>
-<li><code>$(&quot;p&quot;).css(&quot;propertyname&quot;:&quot;value&quot;,...)</code> 设置多个被选元素的样式属性</li>
-</ul>
-<p>尺寸</p>
-<ul>
-<li><code>$(&quot;#div1&quot;).width()|height() </code> 设置或返回元素的高度或宽度(不包括内外边距和边框)</li>
-<li><code>$(&quot;#div1&quot;).innerWidth()|innerHeight() </code> 返回元素的高度或宽度(包括内边距)</li>
-<li><code>$(&quot;#div1&quot;).outerWidth()|outerHeight() </code> 返回元素的高度或宽度(包括内边距和边框)</li>
-<li><code>$(&quot;#div1&quot;).outerWidth(true)|outerHeight(true) </code> 返回元素的高度或宽度(包括内边距和边框和外边距)</li>
-</ul>
-<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast” 或毫秒。可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</p>
-<p>显示/隐藏</p>
-<ul>
-<li><code>$(this).hide(speed,callback)</code> 隐藏当前的 HTML 元素。</li>
-<li><code>$(this).show(speed,callback)</code> 显示当前的 HTML 元素。</li>
-<li><code>$(this).toggle(speed,callback)</code> 切换显示/隐藏当前的 HTML 元素。</li>
-</ul>
-<p>淡入/淡出</p>
-<ul>
-<li><code>$(this).fadeIn(speed,callback)</code> 淡入当前的 HTML 元素。</li>
-<li><code>$(this).fadeOut(speed,callback)</code> 淡出当前的 HTML 元素。</li>
-<li><code>$(this).fadeToggle(speed,callback)</code> 切换淡入/淡出当前的 HTML 元素。</li>
-<li><code>$(this).fadeTo(speed,opacity,callback)</code> 允许渐变为给定的不透明度（值介于 0 与 1 ）。</li>
-</ul>
-<p>滑动</p>
-<ul>
-<li><code>$(selector).slideDown(speed,callback)</code> 向下滑动元素</li>
-<li><code>$(selector).slideUp(speed,callback)</code> 向上滑动元素</li>
-<li><code>$(selector).slideToggle(speed,callback)</code> 切换向上/向下滑动元素</li>
-</ul>
-<p>动画</p>
-<ul>
-<li><code>$(selector).animate(&#123;params&#125;,speed,callback)</code> 添加动画效果</li>
-<li><code>$(selector).stop(stopAll,goToEnd)</code> 停止当前动画效果<ul>
-<li>注:stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。</li>
-</ul>
-</li>
-</ul>
-<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p>祖先</p>
-<ul>
-<li><code>$(selector).parent()</code>  返回被选元素的直接父元素</li>
-<li><code>$(selector).parents()</code>  返回被选元素的所有祖先元素</li>
-<li><code>$(selector).parentsUntil(selector)</code>  返回两个元素之间的所有祖先元素</li>
-</ul>
-<p>后代</p>
-<ul>
-<li><code>$(selector).children()</code>  返回被选元素的所有直接子元素</li>
-<li><code>$(selector).find(selector)</code>  返回被选元素中选择的所有后代元素</li>
-</ul>
-<p>同胞</p>
-<ul>
-<li><p><code>$(selector).siblings()</code>  返回被选元素的所有同胞元素</p>
-</li>
-<li><p><code>$(selector).next()</code>  返回被选元素的下一个同胞元素</p>
-</li>
-<li><p><code>$(selector).nextAll()</code>  返回被选元素的下面的所有同胞元素</p>
-</li>
-<li><p><code>$(selector).nextUntil(selector)</code>  返回两个给定参数中间的所有同胞元素</p>
-</li>
-<li><p><code>prev(), prevAll(), prevUntil()</code> 跟前面类似，但方向相反</p>
-</li>
-</ul>
-<p>过滤</p>
-<ul>
-<li><p><code>$(selector).first()</code>  返回被选元素的首个元素。</p>
-</li>
-<li><p><code>$(selector).last()</code>  返回被选元素的最后一个元素。</p>
-</li>
-<li><p><code>$(selector).eq(index)</code>  返回被选元素中带有指定索引的元素。</p>
-</li>
-<li><p><code>$(selector).filter(&quot;.info&quot;)</code>  返回匹配的元素。</p>
-</li>
-<li><p><code>$(selector).not(&quot;.info&quot;)</code>  返回不匹配的元素。</p>
-</li>
-</ul>
-<p>AJAX</p>
-<ul>
-<li><p><code>$(selector).load(URL,data,callback);</code> 从服务器加载返回数据，并放入到被选元素中。</p>
-<ul>
-<li>callback可选参数</li>
-<li>responseTxt - 包含调用成功时的结果内容</li>
-<li>statusTXT - 包含调用的状态     <code>&#39;success&#39;, &#39;error &#39;</code></li>
-<li>xhr - 包含 XMLHttpRequest 对象 <code>status, statusText</code></li>
-</ul>
-</li>
-<li><p><code>$.get(URL,callback);</code> 发送get请求</p>
-</li>
-<li><p><code>$.get(URL,data,callback);</code> 发送post请求</p>
-</li>
-</ul>
+        <p>转眼到现在就已经三个多月了，本来我是想早点写这个实习体会的，但是由于最近比较忙也就没顾着写。到现在才写，不得不说，愈发的感觉自学跟工作是不一样的，工作会让你收获更多，但工作有很大的局限性，自学则没有限制。<span id="more"></span></p>
+<h2 id="实习第一个月"><a href="#实习第一个月" class="headerlink" title="实习第一个月"></a>实习第一个月</h2><p>&nbsp;&nbsp;之前第一个月也写过一些体会，主要是刚入职场，虽然是实习生，但是也体会到了真实的职场，工作和在学校的不同。这种是不一样的，之前在上学的时候，也是暑假寒假去上班，赚点零花钱，但是那种生活是有盼头的，想着开学。现在不一样了，没有开学了，工作可能就是一辈子到头，有一点点的压迫感。之前刚开始租房一个人住的时候，感觉还是挺不舒服的，但是现在还好，至少自己独立了，就说这么多吧，至于其他的体会，可能我之前写的一个月实习体会可能会更真实一点。</p>
+<h2 id="实习第二个月"><a href="#实习第二个月" class="headerlink" title="实习第二个月"></a>实习第二个月</h2><p>&nbsp;&nbsp;刚刚去翻了之前写的周报，才逐渐回想起来当时都干了什么，有些东西真的就是可能不记录下来就忘了，还有知识，所以大家也要做好笔记呀，第二个月前半个月比较闲，没啥事，摸鱼摸了半个月，偶尔一些小改动，不过工作量不大，一直在看react，后半个月，参与了react开发的项目，负责两个页面，组件库用的antd,感觉脱离了原生加jQuery，终于踏上了主流开发语言，之前也没自己独立负责过，现在自己单独写，发现其实还好，有很多东西，可能一眼看上去感觉很难，然后慢慢写，就发现其实没有那么难，遇到一个坎，想办法迈过去就是了，不过公司的业务逻辑还是比较复杂的，而且期间我遇到了一个react的坑，就是关于动态路由切换组件没有重新挂载的问题，最终解决了，我对组件进行了处理，将路径作为了它的key,最终解决了这个问题<code>export withRouter((props)=&gt;&lt;UserAccount &#123;...props&#125; key=&#123;props.location.pathname&#125;)</code>期间也会了不少其他的东西，例如本地mock开发，按照需求文档跟后端进行沟通调整接口数据等，如果不是工作，可能这些都不会用到。</p>
+<h2 id="实习第三个月"><a href="#实习第三个月" class="headerlink" title="实习第三个月"></a>实习第三个月</h2><p>&nbsp;&nbsp;第三个月前半个月也在处理上个月的工作，配合后端进行测试，以及配合测试人员测试。后半个月，又去了另外一个部门帮忙，他们赶着上线，然后天天加班，天天加班，周六还加班。去的都是实习生，因为我jQuery还可以，所以，基本上是我带着几个实习生在做，很多组件什么的都写好了，只需要复用，再稍作修改，就可以了。不过成长也是很大的， 至少很多东西自己敢尝试了，之前一直按部就班，涉及的东西不太多。不过页面逻辑还是很复杂的，一个页面调用了19个接口，自己写的东西其实不是很多，就是封装了几个函数，写了一个组件，其他的都是复用之前的，或者组件稍作修改。成长很迅速，因为去的时候，我还要负责修改他们之前遗留的bug，之前遗留的还挺多，边写代码，边改bug,需求的话也不是很确定，基本上处于边开发，边修改，还有各种约束等，都是后期开发完之后又修改，反正挺麻烦的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp;&nbsp;这三个月还是挺不错的，中秋公司还发了月饼和小礼品，不过感觉以后工作不能找966，甚至995也不可以，因为虽然现在是965，但是也感觉自己的学习时间也不是很多，慢慢的就每天学习的时间就变少了，平时工作还好，一旦加班，真的是没时间学习了，只有周末可能会看几个小时的课，学些新东西。越来越适应职场的生活了。</p>
 
       
     </div>
@@ -514,7 +394,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/jquery/" rel="tag"># jquery</a>
+            <a href="/tags/%E5%AE%9E%E4%B9%A0%E4%BD%93%E4%BC%9A/" rel="tag"># 实习体会</a>
           
         </div>
       
@@ -527,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/07/14/fieldwork/" rel="next" title="一个月实习体会">
-                <i class="fa fa-chevron-left"></i> 一个月实习体会
+              <a href="/2021/08/29/react-needs1/" rel="next" title="关于react富文本显示的需求问题">
+                <i class="fa fa-chevron-left"></i> 关于react富文本显示的需求问题
               </a>
             
           </div>
@@ -536,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/08/25/react-bug1/" rel="prev" title="关于动态路由切换组件没有重新挂载">
-                关于动态路由切换组件没有重新挂载 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -675,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#html"><span class="nav-number">1.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%88%E6%9E%9C"><span class="nav-number">2.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%81%8D%E5%8E%86"><span class="nav-number">3.</span> <span class="nav-text">遍历</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9C%88"><span class="nav-number">1.</span> <span class="nav-text">实习第一个月</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%9C%88"><span class="nav-number">2.</span> <span class="nav-text">实习第二个月</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%89%E4%B8%AA%E6%9C%88"><span class="nav-number">3.</span> <span class="nav-text">实习第三个月</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
